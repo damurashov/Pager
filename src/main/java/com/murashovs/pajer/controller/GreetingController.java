@@ -1,4 +1,4 @@
-package com.murashovs.pajer;
+package com.murashovs.pajer.controller;
 
 
 import com.murashovs.pajer.entity.Message;
