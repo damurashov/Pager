@@ -15,7 +15,7 @@ import java.util.Map;
 
 
 @Controller
-public class GreetingController {
+public class MainController {
 
     @Autowired
     private MessageRepository messageRepository;
@@ -33,7 +33,6 @@ public class GreetingController {
         return "main";
     }
 
-    // TODO: check out this mapping
     @PostMapping("submit_msg")
     public String add(@RequestParam String text, @RequestParam String tag, Map<String, Object> model) {
         Message msg = new Message(text, tag);

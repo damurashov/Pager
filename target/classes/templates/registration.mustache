@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <title>Регистрация</title>
+</head>
+<body>
+{{#message}}
+    {{message}}
+{{/message}}
+<form action="/registration" method="post">
+    <div><label>Имя пользователя: <input type="text" name="username"/></label></div>
+    <div><label>Пароль : <input type="password" name="password"/></label></div>
+    <div><input type="submit" value="Зарегистрироваться"/></div>
+    <input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
+</form>
+</body>
+</html>
