@@ -33,7 +33,7 @@ public class MainController {
         return "main";
     }
 
-    @PostMapping("submit_msg")
+    @PostMapping("/main")
     public String add(@RequestParam String text, @RequestParam String tag, Map<String, Object> model) {
         Message msg = new Message(text, tag);
 
