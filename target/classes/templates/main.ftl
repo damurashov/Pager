@@ -1,33 +1,32 @@
-<html>
-<body>
+<#import "parts/common.ftl" as c>
+<#import "parts/login.ftl" as l>
+<@c.page>
     <div>
-        <form action="/logout" method="post">
-            <input type="submit" value="Выйти"/>
-            <input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
-        </form>
+        <@l.logout />
     </div>
     <div>
         <form method="post" action="submit_msg">
             <input type="text" name="text" placeholder="Введите сообщение" />
             <input type="text" name="tag" placeholder="Тег" />
             <button type="submit">Отправить</button>
-            <input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
+            <input type="hidden" name="_csrf" value="${_csrf.token}"/>
         </form>
     </div>
     <div>Список сообщений</div>
         <form method="post" action="filter">
             <input type="text" name="text"/>
             <button type="submit">Найти</button>
-            <input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
+            <input type="hidden" name="_csrf" value="${_csrf.token}"/>
         </form>
-    {{#messages}}
+    <#list messages as message>
     <div>
-        <b>{{id}}</b>
-        <span>{{text}}</span>
-        <b>{{tag}}</b>
-        <strong>{{authorName}}</strong>
+        <b>${message.id}</b>
+        <span>${message.text}</span>
+        <b>${message.tag}</b>
+        <strong>${message.authorName}</strong>
 
     </div>
-    {{/messages}}
-</body>
-</html>
+    <#else>
+        Нет сообщений!
+    </#list>
+</@c.page>
