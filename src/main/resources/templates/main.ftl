@@ -14,12 +14,14 @@
     </div>
     <div>Список сообщений</div>
         <form method="get" action="/main">
-            <#if filter??>
-            <input type="text" name="filter" value="${filter}"/>
-            <#else>
-            <input type="text" name="filter" value=""/>
-            </#if>
+            <input type="text" name="filter" value="${filter?if_exists}"/>
             <button type="submit">Найти</button>
+            <!--<#if filter??>-->
+            <!--<input type="text" name="filter" value="${filter}"/>-->
+            <!--<#else>-->
+            <!--<input type="text" name="filter" value=""/>-->
+            <!--</#if>-->
+            <!--<button type="submit">Найти</button>-->
         </form>
     <#list messages as message>
     <div>
