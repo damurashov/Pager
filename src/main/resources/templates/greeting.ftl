@@ -1,5 +1,5 @@
 <html lang="en" style="
-            background: #red; /* fallback color */
+            background-image: url("");
             background: linear-gradient( to right, #3D2B48, #644962);
             background-repeat: no-repeat;
             background-size: cover;
