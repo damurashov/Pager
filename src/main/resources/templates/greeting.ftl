@@ -15,8 +15,8 @@
 
 </head>
 <body>
-<#include "parts/navbar.ftl">
-<div class="container ">
+<div class="center-block">
+    <img src=""/>
 </div>
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
