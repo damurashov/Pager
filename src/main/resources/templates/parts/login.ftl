@@ -17,7 +17,7 @@
     <#else>
         <#assign btnValue="Зарегистрироваться">
     </#if>
-    <input class="button btn-primary p-2 rounded" style="background-color:#3D2B48" type="submit" value="${btnValue}"/>
+    <input class="button btn-primary p-2 border-0 rounded" style="background-color:#3D2B48" type="submit" value="${btnValue}"/>
     <#if !isRegisterForm>
     <a href="/registration">Регистрация</a>
     </#if>
@@ -27,7 +27,7 @@
 
 <#macro logout>
 <form action="/logout" method="post">
-    <input type="submit" value="Выйти"/>
+    <input class="button btn-primary p-2 border-0 rounded m-2" style="background-color:#3D2B48" type="submit" value="Выйти"/>
     <input type="hidden" name="_csrf" value="${_csrf.token}"/>
 </form>
 </#macro>

@@ -1,4 +1,5 @@
 <#include "security.ftl">
+<#import "login.ftl" as l>
 
 <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#644962">
     <a class="navbar-brand" href="/">
@@ -25,5 +26,8 @@
         </ul>
 
         <div class="navbar-text">${name}</div>
+    <#if known>
+        <@l.logout />
+    </#if>
     </div>
 </nav>
