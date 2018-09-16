@@ -17,7 +17,7 @@
     <#else>
         <#assign btnValue="Зарегистрироваться">
     </#if>
-    <input class="button btn-primary p-2 border-0 rounded" style="background-color:#3D2B48" type="submit" value="${btnValue}"/>
+    <input class="button btn-primary p-2 border-0 rounded" style="background-color:#3D2B48; border-radius: 3em 1em;" type="submit" value="${btnValue}"/>
     <#if !isRegisterForm>
     <a href="/registration">Регистрация</a>
     </#if>
