@@ -30,6 +30,9 @@ public class RegistrationController {
         if (userFromDb != null) {
             model.put("message", "Пользователь с таким именем уже существует");
             return "registration";
+        } else if (user.getUsername().length() < 4 || user.getPassword().length() < 4) {
+            model.put("message", "Длина имя пользователя и пароля должна быть более 3 смв.");
+            return "registration";
         }
 
         user.setActive(true);

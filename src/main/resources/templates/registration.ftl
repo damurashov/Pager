@@ -5,5 +5,5 @@
 <#if message??>
 ${message}
 </#if>
-<@l.login "/registration" />
+<@l.login "/registration" true/>
 </@c.page>
